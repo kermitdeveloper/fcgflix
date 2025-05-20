@@ -40,12 +40,12 @@
     <title>FGCFLIX - Assistir Filmes Online e Séries</title>
     <meta name="description" content="">
     <meta name="robots" content="follow, index">
-    <link rel="canonical" href="https://filmesxp.com/">
+    <link rel="canonical" href="">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="FGCFLIX - Assistir Filmes Online e Séries">
     <meta property="og:description" content="">
-    <meta property="og:url" content="https://filmesxp.com/">
+    <meta property="og:url" content="">
     <meta property="og:site_name" content="FGCFLIX - Assistir Filmes Online e Séries">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FGCFLIX - Assistir Filmes Online e Séries">
@@ -98,17 +98,18 @@
             </div>
 
             <div class="menu"><a title="Início" class="hover item active"
-                    href="https://fgcflix.vercel.app/">Início</a><a title="Assistir Filmes Online" class="hover item "
-                    href="https://fgcflix.vercel.app/filmes/">Filmes</a><a title="Assistir Séries Online"
-                    class="hover item " href="https://fgcflix.vercel.app/404">Séries</a><a title="Assistir Lançamentos"
+                    href="https://fgcflix.vercel.app/">Início</a><a title="" class="hover item "
+                    href="https://fgcflix.vercel.app/filmes/">Filmes</a><a title=""
+                    class="hover item " href="https://fgcflix.vercel.app/series/">Séries</a><a title=""
                     class="hover item " href="https://fgcflix.vercel.app/404">Lançamentos</a>
-                <a title="Assistir Lançamentos" class="hover item " href="#">Futebol AO VIVO<span
+                <a title="" class="hover item " href="#">Futebol AO VIVO<span
                         style="font-size: 10px; color: #b8b6b6; margin-left: 4px;">Em
                         breve</span></a>
             </div>
 
         </div>
     </header>
+    
     <div id="mainLauncher">
         <div class="hover"></div>
         <div class="wrap"><br><br><br><br>
@@ -687,6 +688,9 @@
                 <h3>FGCFLIX - Os melhores filmes online do Brasil</h3>
                 <br>
                 <div class="generalMoviesList">
+                    <div id="filmes" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+
+                    <script type="module" src="/js/filmes.js"></script>
                     <a href="https://fgcflix.vercel.app/filmes/assistir/Rango/" title="" class="gPoster">
                         <div class="inner">
                             <div class="p">
@@ -1646,6 +1650,13 @@
             </div>
         </div>
     </div>
+    <div class="paginationSystem"><a class="item click active" href="https://fgcflix.vercel.app/filmes/">1</a><a
+            class="item click " href="https://fgcflix.vercel.app/filmes/02/">2</a>
+        <a class="item click " href="#">3</a><a class="item click " href="#">4</a>
+        <a class="item click " href="#">5</a>
+        <a class="item click next" rel="next" href="https://fgcflix.vercel.app/filmes/02/">Próximo</a>
+    </div>
+    </div>
     <footer>
         <div class="wrap">
             <h2>FGC FLIX A MELHOR PLATAFORMA DE FILMES ONLINE</h2>
@@ -1688,6 +1699,8 @@
             </div>
         </div>
     </footer>
+
+
     <script src="js/jquery.js">"></script>
     <script>var bsliderResizeTimeout, bsliderIsDragging = !1, bsliderWasDragMouseMoving = !1, bsliderInitialClick = 0, bsliderCurrentSliderMax = 0, bsliderCurrentLeft = 0, bsliderStarterSlide = 0; function bslider() {
             $(".bslider").each(function (e) {
