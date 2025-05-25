@@ -96,7 +96,7 @@
             opacity: 0;
         }
     </style>
-<style>
+    <style>
         .feedback-container {
             position: fixed;
             bottom: 20px;
@@ -175,6 +175,28 @@
         }
     </style>
 </head>
+
+<body>
+
+    <div class="feedback-container">
+        <form onsubmit="mostrarMensagem()" action="mailtofelipegravacoes2@gmail.com" method="POST" enctype="text/plain">
+            <h4>Gostou do site? Tem alguma sugestão de filme ou serie?</h4>
+            <textarea name="mensagem" placeholder="Escreva sua opinião..." required></textarea>
+            <button type="submit">Enviar</button>
+            <div class="mensagem-enviada" id="mensagemEnviada">✅ Sua mensagem foi enviada!</div>
+        </form>
+    </div>
+
+    <script>
+        function mostrarMensagem() {
+            const msg = document.getElementById("mensagemEnviada");
+            msg.classList.add("ativa");
+            setTimeout(() => {
+                msg.classList.remove("ativa");
+            }, 3000); // Esconde depois de 3 segundos
+        }
+    </script>
+    </head>
 
 <body>
 
