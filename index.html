@@ -135,6 +135,67 @@
             opacity: 0;
         }
     </style>
+<style>
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff3cd;
+            color: #000000;
+            border: 1px solid #ffeeba;
+            padding: 10px 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            max-width: 260px;
+            font-size: 13px;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .notification .icon {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Notificação -->
+    <div class="notification" id="notificacao">
+
+        <span><strong>🚨 Atenção:</strong> este site ficará fora do ar em breve para atualização 4.0. Aproveite os
+            filmes antes do fechamento.</span>
+    </div>
+
+    <script>
+        const notificacao = document.getElementById('notificacao');
+
+        function mostrarNotificacao() {
+            notificacao.classList.add('show');
+
+            // Após 19 segundos, esconde a notificação por 2 segundos
+            setTimeout(() => {
+                notificacao.classList.remove('show');
+
+                // Após 2 segundos, mostra novamente
+                setTimeout(mostrarNotificacao, 2000);
+            }, 9000);
+        }
+
+        // Inicia o ciclo
+        mostrarNotificacao();
+    </script>
 </head>
 
 <body id="index">
