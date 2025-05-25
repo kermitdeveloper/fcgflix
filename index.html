@@ -135,6 +135,97 @@
             opacity: 0;
         }
     </style>
+<style>
+        .feedback-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 260px;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .feedback-container h4 {
+            margin: 0 0 8px 0;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .feedback-container textarea {
+            width: 100%;
+            height: 60px;
+            resize: none;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            font-family: inherit;
+        }
+
+        .feedback-container button {
+            width: 100%;
+            background-color: #ffbb00;
+            color: white;
+            border: none;
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .feedback-container button:hover {
+            background-color: #e0aa14;
+        }
+
+        .mensagem-enviada {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            margin-top: 8px;
+            font-size: 13px;
+            color: green;
+            text-align: center;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .mensagem-enviada.ativa {
+            opacity: 1;
+            height: auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="feedback-container">
+        <form onsubmit="mostrarMensagem()" action="mailto:felipegravacoes2@gmail.com" method="POST"
+            enctype="text/plain">
+            <h4>Gostou do site? Tem alguma sugestão de filme ou serie?</h4>
+            <textarea name="mensagem" placeholder="Escreva sua opinião..." required></textarea>
+            <button type="submit">Enviar</button>
+            <div class="mensagem-enviada" id="mensagemEnviada">✅ Sua mensagem foi enviada!</div>
+        </form>
+    </div>
 
 </head>
 
