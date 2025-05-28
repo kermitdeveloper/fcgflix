@@ -1119,7 +1119,119 @@
 
 
 </body>
+<style>
+    body.modal-active {
+        overflow: hidden;
+    }
 
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #modal {
+        background-color: rgba(30, 30, 30, 0.9);
+        color: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.3s ease;
+    }
+
+    #modal h2 {
+        font-size: 22px;
+        margin: 0 0 10px;
+    }
+
+    #modal p {
+        font-size: 15px;
+        color: #ccc;
+        line-height: 1.5;
+        margin: 10px 0;
+    }
+
+    #modal a {
+        display: inline-block;
+        margin-top: 15px;
+        background: #5865F2;
+        padding: 10px 20px;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    #modal a:hover {
+        background: #4752c4;
+    }
+
+    #countdown {
+        margin-top: 12px;
+        font-size: 14px;
+        color: #aaa;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.96);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+
+</head>
+
+<body class="modal-active">
+
+    <!-- Overlay + modal -->
+    <div id="overlay">
+        <div id="modal">
+            <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="#fff"
+                        d="M4.47.22A.75.75 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.75.75 0 0 1-.22.53l-4.25 4.25A.75.75 0 0 1 11 16H5a.75.75 0 0 1-.53-.22L.22 11.53A.75.75 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4m0 8a1 1 0 1 1 0-2a1 1 0 0 1 0 2"
+                        stroke-width="0.5" stroke="#000" />
+                </svg> Atenção, visitante!</h2>
+            <p>Para o site continuar de pé, por favor <strong>não use AdBlock</strong> ou outras formas de burlar os
+                anúncios.</p>
+            <p>Acesse nosso servidor no Discord e <strong>seja o primeiro a ver os lançamentos!</strong></p>
+            <a href="https://discord.gg/seu-link-aqui" target="_blank">Entrar no Discord</a>
+            <div id="countdown">Liberando em 7 segundos...</div>
+        </div>
+    </div>
+
+    <script>
+        let segundos = 7;
+        const countdown = document.getElementById("countdown");
+        const overlay = document.getElementById("overlay");
+
+        const timer = setInterval(() => {
+            segundos--;
+            countdown.textContent = `Liberando em ${segundos} segundos...`;
+            if (segundos <= 0) {
+                clearInterval(timer);
+                overlay.style.display = "none";
+                document.body.classList.remove('modal-active');
+            }
+        }, 1000);
+    </script>
 
 </html>
 <!-- Page optimized by LiteSpeed Cache @2025-05-05 17:45:31 --><!-- Page cached by LiteSpeed Cache 7.0.1 on 2025-05-05 17:45:31 -->
