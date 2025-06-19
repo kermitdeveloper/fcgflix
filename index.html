@@ -54,7 +54,7 @@
         class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://filmesxp.com/#person","name":"FilmesXP - Assistir Filmes Online e S\u00e9ries","image":{"@type":"ImageObject","@id":"https://filmesxp.com/#logo","url":"https://filmesxp.com/wp-content/uploads/2024/11/filmesxpfav.png","contentUrl":"https://filmesxp.com/wp-content/uploads/2024/11/filmesxpfav.png","caption":"FilmesXP - Assistir Filmes Online e S\u00e9ries","inLanguage":"pt-BR"}},{"@type":"WebSite","@id":"https://filmesxp.com/#website","url":"https://filmesxp.com","name":"FilmesXP - Assistir Filmes Online e S\u00e9ries","alternateName":"filmes online, filmes, series, assistir online, filmesxp, xpfilmes, ver filmes","publisher":{"@id":"https://filmesxp.com/#person"},"inLanguage":"pt-BR","potentialAction":{"@type":"SearchAction","target":"https://filmesxp.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"CollectionPage","@id":"https://filmesxp.com/#webpage","url":"https://filmesxp.com/","name":"FilmesXP - Assistir Filmes Online e S\u00e9ries","about":{"@id":"https://filmesxp.com/#person"},"isPartOf":{"@id":"https://filmesxp.com/#website"},"inLanguage":"pt-BR"}]}</script>
     <style>
         #mainLauncher .background {
-            background-image: url(https://image.tmdb.org/t/p/original/bpyzpbS2El4vKrz3NQEP0nO0ghi.jpg)
+            background-image: url(https://image.tmdb.org/t/p/original/sAWkzmPnoLGtoqsIgoBAKvirWrx.jpg)
         }
 
         #recentMovie .background {
@@ -136,6 +136,143 @@
         }
     </style>
 
+<!-- Caixa de feedback com RGB fixo ao redor -->
+<div id="feedback-wrapper">
+    
+  <form id="feedback-form" action="https://app.formsubmit.site/f/b36c8572-575b-4f0f-a0f4-7e900c06a9f4" method="POST">
+    <div id="rgb-blur"></div>
+
+    <div id="feedback-box">
+      <p id="feedback-title">🤔O que você está achando do site?</p>
+
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" placeholder="Tem sugestões ou achou algum bug?" required></textarea>
+
+      <button type="submit">Enviar</button>
+      <div id="success-message">✅ Mensagem enviada com sucesso!</div>
+
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" value="Recebemos seu feedback. Obrigado!">
+    </div>
+  </form>
+</div>
+
+<style>
+  #feedback-wrapper {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 270px;
+    z-index: 9999;
+    pointer-events: all;
+  }
+
+  /* RGB fixo com blur suave ao redor */
+  #rgb-blur {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 20px;
+    z-index: -1;
+    background: linear-gradient(135deg, #ff00cc, #00ffff, #ffcc00, #00ff88);
+    background-size: 200% 200%;
+    filter: blur(14px);
+    opacity: 0.4;
+  }
+
+  #feedback-box {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    font-family: Arial, sans-serif;
+  }
+
+  #feedback-title {
+    font-size: 14px;
+    color: #ffeb3b;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  input, textarea {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+  }
+
+  textarea {
+    height: 60px;
+    resize: none;
+  }
+
+  button {
+    width: 100%;
+    background: #ffeb3b;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #ffc107;
+  }
+
+  #success-message {
+    display: none;
+    margin-top: 8px;
+    background: #4caf50;
+    color: white;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    animation: fadeInOut 2s ease-in-out;
+  }
+
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+</style>
+
+<script>
+  // Mostrar mensagem de sucesso
+  document.getElementById("feedback-form").addEventListener("submit", function () {
+    const msg = document.getElementById("success-message");
+    msg.style.display = "block";
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 3000);
+  });
+
+  // Remover a caixa após 1 minuto
+  setTimeout(() => {
+    const wrap = document.getElementById("feedback-wrapper");
+    wrap.style.transition = "opacity 0.5s ease";
+    wrap.style.opacity = "0";
+    setTimeout(() => wrap.remove(), 1000);
+  }, 60000);
+</script>
 
 
 
@@ -173,7 +310,7 @@
         <div class="hover"></div>
         <div class="wrap"><br><br><br><br>
             <div class="moviePresent"><img class="movieLogo" id="movielogoindex"
-                    src="https://image.tmdb.org/t/p/original/306X2ZyzRcWrQuhsCTEJm6JdGMe.png" height="250" width="500"
+                    src="https://image.tmdb.org/t/p/original/cWpduRp3mqf68OZMOOHxjhg7C9B.png" height="250" width="500"
                     alt="">
 
                 <div class="infos">
@@ -181,11 +318,12 @@
                     <div class="quality"><b>Qualidade FULL HD</b></div>
                 </div>
                 <h1>Filmes Online - Filmes Grátis - Filmes Online Gratis</h1>
-                <p>Nando sonha em ser um grande cantor de Trap, mas, enquanto seu sonho não se torna realidade, <br>ele faz
-                    entregas para o Lanchudo, uma lanchonete de Copacabana.
+                <p>Kat é uma professora de humor de improvisação que começa a questionar se perdeu sua chance ao
+                    sucesso. Quando um policial disfarçado oferece a ela um papel decisivo, ela recruta dois de seus
+                    alunos para se infiltrarem nas gangues de Londres disfarçados de criminosos perigosos.
                 </p>
                 <div class="buttons"><a class="gButton red iconized" title=""
-                        href="https://fgcflix.vercel.app/filmes/assistir3/Confia-Sonho-de-Cria/"><svg
+                        href="https://fgcflix.vercel.app/filmes/assistir3/Improvisa%C3%A7%C3%A3o-Perigosa/"><svg
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.153 232.153">
                             <path
                                 d="M203.791 99.628L49.307 2.294C44.74-.425 39.069.028 34.786.028 17.654.028 17.73 13.255 17.73 16.606v198.94c0 2.833-.075 16.579 17.056 16.579 4.283 0 9.955.451 14.521-2.267l154.483-97.333c12.68-7.545 10.489-16.449 10.489-16.449s2.192-8.904-10.488-16.448z"
@@ -1902,7 +2040,7 @@
                             </div>
                         </div>
                     </a>
-                    
+
 
                 </div>
                 <footer>
