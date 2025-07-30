@@ -54,11 +54,11 @@
         class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://filmesxp.com/#person","name":"FilmesXP - Assistir Filmes Online e S\u00e9ries","image":{"@type":"ImageObject","@id":"https://filmesxp.com/#logo","url":"https://filmesxp.com/wp-content/uploads/2024/11/filmesxpfav.png","contentUrl":"https://filmesxp.com/wp-content/uploads/2024/11/filmesxpfav.png","caption":"FilmesXP - Assistir Filmes Online e S\u00e9ries","inLanguage":"pt-BR"}},{"@type":"WebSite","@id":"https://filmesxp.com/#website","url":"https://filmesxp.com","name":"FilmesXP - Assistir Filmes Online e S\u00e9ries","alternateName":"filmes online, filmes, series, assistir online, filmesxp, xpfilmes, ver filmes","publisher":{"@id":"https://filmesxp.com/#person"},"inLanguage":"pt-BR","potentialAction":{"@type":"SearchAction","target":"https://filmesxp.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"CollectionPage","@id":"https://filmesxp.com/#webpage","url":"https://filmesxp.com/","name":"FilmesXP - Assistir Filmes Online e S\u00e9ries","about":{"@id":"https://filmesxp.com/#person"},"isPartOf":{"@id":"https://filmesxp.com/#website"},"inLanguage":"pt-BR"}]}</script>
     <style>
         #mainLauncher .background {
-            background-image: url(https://image.tmdb.org/t/p/original/aEHwpKJyLB56AqR7SPBje5L8M79.jpg)
+            background-image: url(https://image.tmdb.org/t/p/original/lP5kcBL67k4aduIEzlSTVRR4RBh.jpg)
         }
 
         #recentMovie .background {
-            background-image: url(https://image.tmdb.org/t/p/original/olRPEYjyjzoMAODjOMjF2K1VlzO.jpg)
+            background-image: url(https://image.tmdb.org/t/p/original/zGTP7WxN4xPflNaiYjGwUTCY2TB.jpg)
         }
     </style>
     <link rel="icon" href="icon.png" sizes="32x32">
@@ -136,143 +136,159 @@
         }
     </style>
 
-<!-- Caixa de feedback com RGB fixo ao redor -->
-<div id="feedback-wrapper">
-    
-  <form id="feedback-form" action="https://app.formsubmit.site/f/b36c8572-575b-4f0f-a0f4-7e900c06a9f4" method="POST">
-    <div id="rgb-blur"></div>
+    <!-- Caixa de feedback com RGB fixo ao redor -->
+    <div id="feedback-wrapper">
 
-    <div id="feedback-box">
-      <p id="feedback-title">🤔O que você está achando do site?</p>
+        <form id="feedback-form" action="https://app.formsubmit.site/f/b36c8572-575b-4f0f-a0f4-7e900c06a9f4"
+            method="POST">
+            <div id="rgb-blur"></div>
 
-      <input type="text" name="name" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <textarea name="mensagem" placeholder="Tem sugestões ou achou algum bug?" required></textarea>
+            <div id="feedback-box">
+                <p id="feedback-title">🤔O que você está achando do site?</p>
 
-      <button type="submit">Enviar</button>
-      <div id="success-message">✅ Mensagem enviada com sucesso!</div>
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Tem sugestões ou achou algum bug?" required></textarea>
 
-      <!-- FormSubmit config -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_autoresponse" value="Recebemos seu feedback. Obrigado!">
+                <button type="submit">Enviar</button>
+                <div id="success-message">✅ Mensagem enviada com sucesso!</div>
+
+                <!-- FormSubmit config -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_autoresponse" value="Recebemos seu feedback. Obrigado!">
+            </div>
+        </form>
     </div>
-  </form>
-</div>
 
-<style>
-  #feedback-wrapper {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 270px;
-    z-index: 9999;
-    pointer-events: all;
-  }
+    <style>
+        #feedback-wrapper {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 270px;
+            z-index: 9999;
+            pointer-events: all;
+        }
 
-  /* RGB fixo com blur suave ao redor */
-  #rgb-blur {
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-    border-radius: 20px;
-    z-index: -1;
-    background: linear-gradient(135deg, #ff00cc, #00ffff, #ffcc00, #00ff88);
-    background-size: 200% 200%;
-    filter: blur(14px);
-    opacity: 0.4;
-  }
+        /* RGB fixo com blur suave ao redor */
+        #rgb-blur {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border-radius: 20px;
+            z-index: -1;
+            background: linear-gradient(135deg, #ff00cc, #00ffff, #ffcc00, #00ff88);
+            background-size: 200% 200%;
+            filter: blur(14px);
+            opacity: 0.4;
+        }
 
-  #feedback-box {
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
-    padding: 16px;
-    border-radius: 18px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    font-family: Arial, sans-serif;
-  }
+        #feedback-box {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 16px;
+            border-radius: 18px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            font-family: Arial, sans-serif;
+        }
 
-  #feedback-title {
-    font-size: 14px;
-    color: #ffeb3b;
-    text-align: center;
-    margin-bottom: 10px;
-  }
+        #feedback-title {
+            font-size: 14px;
+            color: #ffeb3b;
+            text-align: center;
+            margin-bottom: 10px;
+        }
 
-  input, textarea {
-    width: 100%;
-    margin-bottom: 8px;
-    padding: 8px;
-    border: none;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
-    font-size: 13px;
-    outline: none;
-  }
+        input,
+        textarea {
+            width: 100%;
+            margin-bottom: 8px;
+            padding: 8px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 13px;
+            outline: none;
+        }
 
-  textarea {
-    height: 60px;
-    resize: none;
-  }
+        textarea {
+            height: 60px;
+            resize: none;
+        }
 
-  button {
-    width: 100%;
-    background: #ffeb3b;
-    color: black;
-    font-weight: bold;
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 13px;
-    transition: background 0.3s ease;
-  }
+        button {
+            width: 100%;
+            background: #ffeb3b;
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: background 0.3s ease;
+        }
 
-  button:hover {
-    background: #ffc107;
-  }
+        button:hover {
+            background: #ffc107;
+        }
 
-  #success-message {
-    display: none;
-    margin-top: 8px;
-    background: #4caf50;
-    color: white;
-    padding: 6px;
-    border-radius: 8px;
-    font-size: 12px;
-    text-align: center;
-    animation: fadeInOut 2s ease-in-out;
-  }
+        #success-message {
+            display: none;
+            margin-top: 8px;
+            background: #4caf50;
+            color: white;
+            padding: 6px;
+            border-radius: 8px;
+            font-size: 12px;
+            text-align: center;
+            animation: fadeInOut 2s ease-in-out;
+        }
 
-  @keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(10px); }
-    10% { opacity: 1; transform: translateY(0); }
-    90% { opacity: 1; }
-    100% { opacity: 0; transform: translateY(-10px); }
-  }
-</style>
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
 
-<script>
-  // Mostrar mensagem de sucesso
-  document.getElementById("feedback-form").addEventListener("submit", function () {
-    const msg = document.getElementById("success-message");
-    msg.style.display = "block";
-    setTimeout(() => {
-      msg.style.display = "none";
-    }, 3000);
-  });
+            10% {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-  // Remover a caixa após 1 minuto
-  setTimeout(() => {
-    const wrap = document.getElementById("feedback-wrapper");
-    wrap.style.transition = "opacity 0.5s ease";
-    wrap.style.opacity = "0";
-    setTimeout(() => wrap.remove(), 1000);
-  }, 60000);
-</script>
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+
+    <script>
+        // Mostrar mensagem de sucesso
+        document.getElementById("feedback-form").addEventListener("submit", function () {
+            const msg = document.getElementById("success-message");
+            msg.style.display = "block";
+            setTimeout(() => {
+                msg.style.display = "none";
+            }, 3000);
+        });
+
+        // Remover a caixa após 1 minuto
+        setTimeout(() => {
+            const wrap = document.getElementById("feedback-wrapper");
+            wrap.style.transition = "opacity 0.5s ease";
+            wrap.style.opacity = "0";
+            setTimeout(() => wrap.remove(), 1000);
+        }, 60000);
+    </script>
 
 
 
@@ -310,18 +326,19 @@
         <div class="hover"></div>
         <div class="wrap"><br><br><br><br>
             <div class="moviePresent"><img class="movieLogo" id="movielogoindex"
-                    src="https://image.tmdb.org/t/p/original/tKyLpQzSnRIDmGBwZ6OeoZQ8T8y.png" height="250" width="500"
+                    src="https://image.tmdb.org/t/p/original/oXgFMELFJMwMX2mk1vZAMwYcVYc.png" height="250" width="500"
                     alt="">
 
                 <div class="infos">
-                    <div class="year">Lançado em: <b>2023</b></div>
+                    <div class="year">Lançado em: <b>2025</b></div>
                     <div class="quality"><b>Qualidade FULL HD</b></div>
                 </div>
                 <h1>Filmes Online - Filmes Grátis - Filmes Online Gratis</h1>
-                <p>Para salvar seu irmão mais novo de um perigoso quartel em Medelín, Reda (Ramzy Bedia) tem um plano completamente insano: montar uma equipe e invadir a Colômbia! Porém, essa aventura sai de controle quando ele decide sequestrar o filho do líder do quartel para trocá-lo pela vida de seu irmão.
+                <p>Um pai brasileiro viaja até Bariloche com a família para conhecer os futuros sogros da filha — até
+                    que tudo acaba em treta.
                 </p>
                 <div class="buttons"><a class="gButton red iconized" title=""
-                        href="https://fgcflix.vercel.app/filmes/assistir3/Resgate-em-Medel%C3%ADn/"><svg
+                        href="https://fgcflix.vercel.app/filmes/assistir3/Fam%C3%ADlia-Pero-no-Mucho/"><svg
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.153 232.153">
                             <path
                                 d="M203.791 99.628L49.307 2.294C44.74-.425 39.069.028 34.786.028 17.654.028 17.73 13.255 17.73 16.606v198.94c0 2.833-.075 16.579 17.056 16.579 4.283 0 9.955.451 14.521-2.267l154.483-97.333c12.68-7.545 10.489-16.449 10.489-16.449s2.192-8.904-10.488-16.448z"
@@ -361,102 +378,109 @@
         </div>
         <div class="itemsList">
             <div class="bslider" data-bslider-margin="20" data-bslider-left-margin="70" data-bslider-right-margin="50"
-                data-bslider-item-class="gPoster" data-bslider-nav="true" id="homeSliderList"><a
-                    href="https://fgcflix.vercel.app/filmes/assistir2/Despedida-em-Grande-Estilo/" title=""
+                data-bslider-item-class="gPoster" data-bslider-nav="true" id="homeSliderList">
+                <a href="https://fgcflix.vercel.app/filmes/assistir3/O-Massacre-da-Serra-Elétrica/" title=""
                     class="gPoster">
                     <div class="inner">
                         <div class="p">
-                            <div class="selo-novo">🔥 EM ALTA</div> <!-- Selo dentro da imagem -->
-                            <img src="https://image.tmdb.org/t/p/w500/sUP26yq5K8MlRwhAwZ0sklddERD.jpg" class="img"
+                            <div class="selo-novo">🔥 Em alta</div> <!-- Selo dentro da imagem -->
+                            <img src="https://image.tmdb.org/t/p/w500/peL5G7S7KER4y5fUAGgtGxRccbv.jpg" class="img"
                                 width="185" height="270" alt="" loading="lazy" decoding="async">
                             <div class="e">
-                                <h3>Despedida em Grande Estilo</h3>
-                                <p>Willie, Joe e Albert são amigos há décadas. Eles levam uma vida pacata, mas sofrem
-                                    com problemas financeiros. Quando Willie testemunha o assalto milionário a um banco,
-                                    decide chamar Joe e Albert para elaborarem o seu próprio assalto. É a vez de os
-                                    idosos se rebelarem contra a exploração dos bancos.
-                                </p>
-                                <span class="btnsa">Assistir Agora</span>
-                            </div>
-                        </div>
-                        <div class="i">
-                            <span>Despedida em Grande Estilo</span>
-                            <div class="mi">
-                                <div class="y">2017</div>
-                                <div class="r">6.7</div>
-                                <div class="t">1h 36m</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://fgcflix.vercel.app/filmes/assistir2/A-Lenda-de-Ochi/" title="" class="gPoster">
-                    <div class="inner">
-                        <div class="p">
-                            <div class="selo-novo">🔥 EM ALTA</div> <!-- Selo dentro da imagem -->
-                            <img src="https://image.tmdb.org/t/p/w300/WqxyyacuNBonVEm3VVh01BK1a3.jpg" class="img"
-                                width="185" height="270" alt="" loading="lazy" decoding="async">
-                            <div class="e">
-                                <h3>A Lenda de Ochi</h3>
-                                <p>Em uma vila remota na ilha de Carpathia, uma tímida garota de fazenda chamada Yuri
-                                    foi criada para temer uma espécie animal conhecida como Ochi. Mas, quando Yuri
-                                    descobre que um bebê Ochi ferido foi abandonado, ela parte em uma aventura para
-                                    levá-lo para casa.
+                                <h3>O Massacre da Serra Elétrica</h3>
+                                <p>Um grupo de jovens está em meio a uma viagem do Texas para o México, até enfrentarem
+                                    um
+                                    problema: a gasolina do carro chega ao fim. Eles param bem em frente a um matadouro,
+                                    onde começam a procurar desesperadamente por um telefone. Porém o que eles não sabem
+                                    é
+                                    que ali vive uma família de canibais, incluindo um homem que mata usando uma serra
+                                    elétrica.
                                 </p><span class="btnsa">Assistir Agora</span>
                             </div>
                         </div>
-                        <div class="i"><span>A Lenda de Ochi</span>
+                        <div class="i"><span>O Massacre da Serra Elétrica</span>
                             <div class="mi">
-                                <div class="y">2025</div>
-                                <div class="r">9.9</div>
-                                <div class="t">1h 36m</div>
+                                <div class="y">2003</div>
+                                <div class="r">6.6</div>
+                                <div class="t">1h 38m</div>
                             </div>
                         </div>
                     </div>
                 </a>
-                <a href="https://fgcflix.vercel.app/filmes/assistir2/Um-Filme-Minecraft/" title="" class="gPoster">
+                <a href="https://fgcflix.vercel.app/filmes/assistir3/Família-Pero-no-Mucho/" title="" class="gPoster">
                     <div class="inner">
                         <div class="p">
                             <div class="selo-novo">🔥 Em alta</div> <!-- Selo dentro da imagem -->
-                            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4VtkIaj76TpQNfhDHXQDdT9uBN5.jpg"
+                            <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/qZQLQ4pXTw1mJbrB6DSCpDnBSLZ.jpg"
                                 class="img" width="185" height="270" alt="" loading="lazy" decoding="async">
                             <div class="e">
-                                <h3>Um Filme Minecraft</h3>
-                                <p>Quatro desajustados enfrentam problemas comuns do dia a dia quando, de repente,
-                                    são sugados por um portal misterioso para o Overworld: uma terra fascinante e
-                                    cúbica, movida pela imaginação. Para voltarem para casa, eles precisarão dominar
-                                    esse novo mundo enquanto embarcam em uma jornada mágica ao lado de um crafter
-                                    experiente e inesperado: Steve.
+                                <h3>Família, Pero no Mucho</h3>
+                                <p>Um pai brasileiro viaja até Bariloche com a família para conhecer os futuros sogros
+                                    da
+                                    filha — até que tudo acaba em treta.
                                 </p><span class="btnsa">Assistir Agora</span>
                             </div>
                         </div>
-                        <div class="i"><span>Um Filme Minecraft</span>
+                        <div class="i"><span>Família, Pero no Mucho</span>
                             <div class="mi">
                                 <div class="y">2025</div>
-                                <div class="r">8.9</div>
-                                <div class="t">1h 41m</div>
+                                <div class="r">9.8</div>
+                                <div class="t">1h 20m</div>
                             </div>
                         </div>
                     </div>
-                </a><a href="https://fgcflix.vercel.app/filmes/assistir2/Lift-Roubo-nas-Alturas/" title=""
-                    class="gPoster">
+                </a>
+                <a href="https://fgcflix.vercel.app/filmes/assistir3/Resgate-em-Medelín/" title="" class="gPoster">
                     <div class="inner">
                         <div class="p">
                             <div class="selo-novo">🔥 Em alta</div> <!-- Selo dentro da imagem -->
-                            <img src="https://image.tmdb.org/t/p/w185/ca74jjIYRVDdsnlWk8JzyVY49dE.jpg" class="img"
+                            <img src="https://image.tmdb.org/t/p/w500/i0Ulb13yY2WCcZ047iThR0dtMd5.jpg" class="img"
                                 width="185" height="270" alt="" loading="lazy" decoding="async">
                             <div class="e">
-                                <h3>Lift: Roubo nas Alturas</h3>
-                                <p>Um ladrão profissional e sua equipe tentam fazer um grande assalto: roubar 500
-                                    milhões de
-                                    dólares em barras de ouro de um avião a 40 mil pés de altitude.
+                                <h3>Resgate em Medelín</h3>
+                                <p>Para salvar seu irmão mais novo de um perigoso quartel em Medelín, Reda (Ramzy Bedia)
+                                    tem
+                                    um plano completamente insano: montar uma equipe e invadir a Colômbia! Porém, essa
+                                    aventura sai de controle quando ele decide sequestrar o filho do líder do quartel
+                                    para
+                                    trocá-lo pela vida de seu irmão.
                                 </p><span class="btnsa">Assistir Agora</span>
                             </div>
                         </div>
-                        <div class="i"><span>Lift: Roubo nas Alturas</span>
+                        <div class="i"><span>Resgate em Medelín</span>
                             <div class="mi">
-                                <div class="y">2024</div>
-                                <div class="r">7.9</div>
-                                <div class="t">1h 47m</div>
+                                <div class="y">2023</div>
+                                <div class="r">7.7</div>
+                                <div class="t">1h 44m</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://fgcflix.vercel.app/filmes/assistir3/Assalto-ao-Banco-da-Espanha/" title="" class="gPoster">
+                    <div class="inner">
+                        <div class="p">
+                            <div class="selo-novo">🔥 Em alta</div> <!-- Selo dentro da imagem -->
+                            <img src="https://image.tmdb.org/t/p/w500/AhRSv4npEaE8ZvuJh4CmQpsXDZg.jpg" class="img" width="185" height="270" alt="" loading="lazy" decoding="async">
+                            <div class="e">
+                                <h3>Assalto ao Banco da Espanha</h3>
+                                <p>Thom Laybrick é um jovem e brilhante engenheiro que dificilmente se atrai pelos
+                                    projetos
+                                    em que é chamado a participar. Mas ele diz sim quando o caçador de tesouros Walter o
+                                    convida para se unir a um grupo de contraventores que pretendem realizar um assalto
+                                    ao
+                                    Banco da Espanha. Calculado em cada detalhe, o roubo se torna uma incessante luta
+                                    contra
+                                    o tempo para que consigam se dar bem em meio à Copa do Mundo em que a Espanha
+                                    disputa a
+                                    final.
+                                </p><span class="btnsa">Assistir Agora</span>
+                            </div>
+                        </div>
+                        <div class="i"><span>Assalto ao Banco da Espanha</span>
+                            <div class="mi">
+                                <div class="y">2021</div>
+                                <div class="r">7.1</div>
+                                <div class="t">1h 58m</div>
                             </div>
                         </div>
                     </div>
@@ -484,78 +508,72 @@
                         </div>
                     </div>
                 </a>
-                <a href="https://fgcflix.vercel.app/filmes/assistir2/Opera%C3%A7%C3%A3o-Zod%C3%ADaco/" title=""
-                    class="gPoster">
+                <a href="https://fgcflix.vercel.app/filmes/assistir3/Asterix-e-Obelix-no-Reino-do-Meio/" title="" class="gPoster">
                     <div class="inner">
                         <div class="p">
                             <div class="selo-novo">🔥 Em alta</div> <!-- Selo dentro da imagem -->
-                            <img src="https://novizer.com/content/movies/posterPt/342/21571.webp" class="img"
-                                width="185" height="270" alt="" loading="lazy" decoding="async">
+                            <img src="https://image.tmdb.org/t/p/w500/cc04u9rMTbT3SIZUTEbDp4OmcQy.jpg" class="img" width="185" height="270" alt="" loading="lazy" decoding="async">
                             <div class="e">
-                                <h3>Operação Zodíaco</h3>
-                                <p>Asian Hawk (Jackie Chan) parte em busca de doze artefatos mágicos desaparecidos desde
-                                    o século XIX: doze cabeças de animais em bronze que representam os signos do
-                                    horóscopo chinês. Auxiliado por um estudante chinês e uma bela francesa, ele não
-                                    desistirá fácil de seu complicado objetivo, mesmo que para isto tenha que cruzar o
-                                    mundo.
+                                <h3>Asterix e Obelix no Reino do Meio</h3>
+                                <p>A única filha do imperador chinês Han Xuandi, escapa de um príncipe rigoroso e
+                                    procura
+                                    ajuda dos gauleses e dos dois bravos guerreiros Asterix e Obelix.
                                 </p><span class="btnsa">Assistir Agora</span>
                             </div>
                         </div>
-                        <div class="i"><span>Operação Zodíaco</span>
+                        <div class="i"><span>Asterix e Obelix no Reino do Meio</span>
                             <div class="mi">
-                                <div class="y">2012</div>
-                                <div class="r">7.9</div>
-                                <div class="t">1h 43m</div>
+                                <div class="y">2023</div>
+                                <div class="r">9.9</div>
+                                <div class="t">1h 52m</div>
                             </div>
                         </div>
                     </div>
                 </a>
-                <a href="https://fgcflix.vercel.app/filmes/assistir2/Ratatouille/" title="" class="gPoster">
-                    <div class="inner">
-                        <div class="p">
-                            <div class="selo-novo">🔥 Em alta</div> <!-- Selo dentro da imagem -->
-                            <img src="https://image.tmdb.org/t/p/w500/xKLM5b6WzfFM3kwDZ7AvOVtoGQN.jpg" class="img"
-                                width="185" height="270" alt="" loading="lazy" decoding="async">
-                            <div class="e">
-                                <h3>Ratatouille</h3>
-                                <p>Um rato que sabe cozinhar faz uma aliança incomum com um jovem trabalhador de cozinha
-                                    em um restaurante famoso.
-                                </p><span class="btnsa">Assistir Agora</span>
-                            </div>
-                        </div>
-                        <div class="i"><span>Ratatouille</span>
-                            <div class="mi">
-                                <div class="y">2007</div>
-                                <div class="r">10.9</div>
-                                <div class="t">1h 50m</div>
-                            </div>
+                <a href="https://fgcflix.vercel.app/filmes/assistir3/A-Hora-Da-Sua-Morte/" title="" class="gPoster">
+                <div class="inner">
+                    <div class="p">
+                        <div class="selo-novo">🔥 Em alta</div> <!-- Selo dentro da imagem -->
+                        <img src="https://image.tmdb.org/t/p/w500/qukqQBC1N2KTakalFPxoKf2SycP.jpg" class="img" width="185" height="270" alt="" loading="lazy" decoding="async">
+                        <div class="e">
+                            <h3>A Hora Da Sua Morte</h3>
+                            <p>Uma jovem enfermeira baixa um aplicativo que promete prever o momento e a data da morte
+                                das pessoas. Quando o aplicativo indica que ela tem três dias de vida restantes, a
+                                enfermeira luta por sua sobrevivência ao mesmo tempo em que enfrenta uma misteriosa
+                                criatura que a assombra.
+                            </p><span class="btnsa">Assistir Agora</span>
                         </div>
                     </div>
-                </a>
-                <a href="https://fgcflix.vercel.app/filmes/assistir2/Partiu-Am%C3%A9rica/" title="" class="gPoster">
-                    <div class="inner">
-                        <div class="p">
-                            <div class="selo-novo">🔥 Em alta</div> <!-- Selo dentro da imagem -->
-                            <img src="https://image.tmdb.org/t/p/w500/t0rCVvPp1uEVXDyyZKhnhcZMoRA.jpg" class="img"
-                                width="185" height="270" alt="" loading="lazy" decoding="async">
-                            <div class="e">
-                                <h3>Partiu América</h3>
-                                <p>Matheus é um dono de um parque de diversões muito simples e tem o sonho de conhecer
-                                    os
-                                    famosos parques dos EUA. Mas, quando a família dele finalmente tem a oportunidade de
-                                    viajar para o exterior pela primeira vez, as coisas não saem como esperado.
-                                </p><span class="btnsa">Assistir Agora</span>
-                            </div>
-                        </div>
-                        <div class="i"><span>Partiu América</span>
-                            <div class="mi">
-                                <div class="y">2024</div>
-                                <div class="r">8.0</div>
-                                <div class="t">1h 41m</div>
-                            </div>
+                    <div class="i"><span>A Hora Da Sua Morte</span>
+                        <div class="mi">
+                            <div class="y">2019</div>
+                            <div class="r">7.8</div>
+                            <div class="t">1h 30m</div>
                         </div>
                     </div>
-                </a>
+                </div>
+            </a>
+                <a href="https://fgcflix.vercel.app/filmes/assistir3/Scooby-Doo-O-Filme/" title="" class="gPoster">
+                <div class="inner">
+                    <div class="p">
+                        <div class="selo-novo">🔥 Em alta</div> <!-- Selo dentro da imagem -->
+                        <img src="https://image.tmdb.org/t/p/w500/b6EpEYp1TALe4N71a5kf5WRiKAx.jpg" class="img" width="185" height="270" alt="" loading="lazy" decoding="async">
+                        <div class="e">
+                            <h3>Scooby-Doo: O Filme</h3>
+                            <p>Um comediante de stand-up à beira do sucesso deve fazer uma escolha terrível quando
+                                descobre um assassino à solta no teatro onde ele está prestes a realizar seu maior show.
+                            </p><span class="btnsa">Assistir Agora</span>
+                        </div>
+                    </div>
+                    <div class="i"><span>Scooby-Doo: O Filme</span>
+                        <div class="mi">
+                            <div class="y">2002</div>
+                            <div class="r">7.9</div>
+                            <div class="t">1h 22m</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
                 <a href="https://fgcflix.vercel.app/series/assistir/Reacher/" title="" class="gPoster">
                     <div class="inner">
                         <div class="p">
@@ -666,27 +684,21 @@
             <div id="recentMovie">
                 <div class="hover"></div>
                 <div class="moviePresent">
-                    <div class="runtime">Newtopia - 8 Episódios</div>
+                    <div class="runtime">Asterix e Obelix no Reino do Meio - O Filme</div>
                     <div class="infos">
                         <div class="rating"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.94 49.94">
                                 <path
                                     d="M48.856 22.731a3.56 3.56 0 0 0 .906-3.671 3.56 3.56 0 0 0-2.892-2.438l-12.092-1.757a1.58 1.58 0 0 1-1.19-.865L28.182 3.043a3.56 3.56 0 0 0-3.212-1.996 3.56 3.56 0 0 0-3.211 1.996L16.352 14c-.23.467-.676.79-1.191.865L3.069 16.623A3.557 3.557 0 0 0 .178 19.06a3.56 3.56 0 0 0 .906 3.671l8.749 8.528c.373.364.544.888.456 1.4L8.224 44.702a3.559 3.559 0 0 0 1.424 3.502 3.552 3.552 0 0 0 3.772.273l10.814-5.686a1.583 1.583 0 0 1 1.472 0l10.815 5.686a3.568 3.568 0 0 0 3.772-.273 3.559 3.559 0 0 0 1.424-3.502L39.651 32.66a1.582 1.582 0 0 1 .456-1.4l8.749-8.529zM37.681 32.998l2.065 12.042a1.553 1.553 0 0 1-.629 1.547 1.558 1.558 0 0 1-1.665.121l-10.815-5.687a3.588 3.588 0 0 0-3.334.001L12.49 46.708a1.56 1.56 0 0 1-1.666-.121 1.554 1.554 0 0 1-.629-1.547l2.065-12.042a3.581 3.581 0 0 0-1.03-3.17l-8.75-8.529a1.55 1.55 0 0 1-.4-1.621c.19-.586.667-.988 1.276-1.077l12.091-1.757a3.576 3.576 0 0 0 2.697-1.959l5.407-10.957a1.551 1.551 0 0 1 1.418-.881c.616 0 1.146.329 1.419.881l5.407 10.957a3.575 3.575 0 0 0 2.696 1.959l12.092 1.757a1.552 1.552 0 0 1 1.276 1.077c.19.585.041 1.191-.4 1.621l-8.749 8.528a3.58 3.58 0 0 0-1.029 3.171z">
                                 </path>
-                            </svg> 9.8<div class="of">/10</div>
+                            </svg> 9.9<div class="of">/10</div>
                         </div>
-                        <div class="year">Lançado em: <b>2025</b></div>
+                        <div class="year">Lançado em: <b>2023</b></div>
                         <div class="quality"><b>HD</b></div>
                     </div>
-                    <h3>Newtopia </h3>
-                    <p>Jae-yoon, militar, e sua namorada, Young-joo, terminam por ligação devido a vários
-                        mal-entendidos. Só que um surto de zumbis assola o mundo. O país declara emergência, um avião
-                        cai no centro da capital, e Jae-yoon e sua unidade ficam presos no topo de um arranha-céu em
-                        Seul. Young-joo enfrenta as ruas cheias de zumbis para chegar até ele. Será que o amor dos dois
-                        sobreviverá ao apocalipse?Depois que seu falecido ex-capitão é incriminado, Lowrey e Burnett
-                        tentam limpar seu nome, apenas
-                        para acabarem se tornando os mais procurados de Miami.</p>
+                    <h3>Asterix e Obelix no Reino do Meio</h3>
+                    <p>Os heróis Asterix e Obelix vão até a China para ajudar a Princesa So Hi a salvar <br>a Imperatriz e suas terras de um abominável príncipe.</p>
                     <div class="buttons"><a class="gButton red iconized" title=""
-                            href="https://fgcflix.vercel.app/series/assistir/Newtopia/"><svg
+                            href="https://fgcflix.vercel.app/filmes/assistir3/Asterix-e-Obelix-no-Reino-do-Meio/"><svg
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.153 232.153">
                                 <path
                                     d="M203.791 99.628L49.307 2.294C44.74-.425 39.069.028 34.786.028 17.654.028 17.73 13.255 17.73 16.606v198.94c0 2.833-.075 16.579 17.056 16.579 4.283 0 9.955.451 14.521-2.267l154.483-97.333c12.68-7.545 10.489-16.449 10.489-16.449s2.192-8.904-10.488-16.448z"
